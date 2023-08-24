@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert Override Test</title>
+  </head>
+  <body>
+    <h1>Alert Override Test</h1>
+
+    <button onclick="alert('This is an alert from the main page!')">
+      Show Alert in Main Page
+    </button>
+
+    <iframe
+      id="testIframe"
+      src="http://localhost:8081/iframe.html"
+      width="300"
+      height="150"
+    ></iframe>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "web_accessible_resources": [
+    {
+      "resources": ["injectedScript.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "manifest_version": 3,
+  "name": "Override Alert",
+  "version": "1.0",
+  "description": "Override the alert function",
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  }
+}
